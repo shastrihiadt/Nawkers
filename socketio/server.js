@@ -185,7 +185,7 @@ io.on('connection', function(client) {
     // Handle a user's request to start a new round
     client.on('startNewRound', function() {
         // If there are enough cards...
-        if(decks[cardRoom].length >= 50) {
+        if(decks[cardRoom].length >= 9) {
            console.log('Starting a new round.');
             emitRoundCards(cardRoom);
             console.log("Deck length in room " + cardRoom + " is now " + decks[cardRoom].length);
