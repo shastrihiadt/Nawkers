@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <title>Nawkers Homepage</title>
+    <meta charset="utf-8">
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Welcome to Nawkers!</h1>
+    <form id="usernameForm" class="form-inline">
+        <span>Enter your username: </span><input class="form-control" id="username">
+        <a href="#" id="submitUsername" class="btn btn-default">Submit</a>
+    </form>
+    <div id="nawkerGame">
+        <p id="message">Waiting for server to deal the cards...</p>
+        <h3>Dealer Card</h3>
+        <p id="dealerCard" class="cards"></p>
+        <img id="dealerCardImage" class="card clickableCard" src="images/cards/joker.png" width="5%" height="5%">
+        <div id="playerCards">
+            <h3>Your Cards</h3>
+            <img id="cardOneImage" class="card clickableCard" src="images/cards/joker.png">
+            <img id="cardTwoImage" class="card clickableCard" src="images/cards/joker.png">
+        </div>
+        <br>
+        <div id="actions"></div>
+        <div>
+            <a href="#" id="continueButton" class="btn btn-primary disabled">Continue</a>
+        </div>
+    </div>
+    <div id="rules">
+        <p>Here are the rules of the game:</p>
+        <ul>
+            <li>After a player sets their name for the game, they are shown the game screen.</li>
+            <li>Each player will be dealt 2 cards along with the card the dealer drew. All are initially face down.</li>
+            <li>The game begins when 4 players connect to the server, at which point the cards are flipped.</li>
+            <li>Each player must then select one of their 2 cards to play. The objective is to beat the dealer's card by playing a card of greater value to get a point while also keeping in mind the cards the other players might play as those must also be beaten in order to win more points.</li>
+            <li>Each round consists of 2 turns in which players must play one card for each turn.</li>
+            <li>The game continues until the dealer runs out of cards to deal to all of the players. At this point, the points are tallied and a winner announced.</li>
+        </ul>
+    </div>
+    <script src="js/socket.io.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    border: 2px solid red;
+    margin: 20px auto 0;
+    padding: 50px;
+    width: 960px;
+}
+
+#playerCards {
+    border: 4px solid grey;
+    height: 275px;
+    margin-top: 20px;
+    padding: 5px 0 0 10px;
+    width: 280px;
+}
+
+.card {
+    display: inline-block;
+    height: 181.5px;
+    width: 125px;
+}
+
+#rules {
+    margin-top: 50px;
+}
+
+img:hover:not(#dealerCardImage) {
+    cursor: pointer;
+}
